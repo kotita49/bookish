@@ -7500,7 +7500,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tatrut\\.nuget\\packages\\": {}
+    "C:\\Users\\tatrutadmin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7508,11 +7508,11 @@
       "projectUniqueName": "C:\\Training\\Bookish\\Bookish.csproj",
       "projectName": "Bookish",
       "projectPath": "C:\\Training\\Bookish\\Bookish.csproj",
-      "packagesPath": "C:\\Users\\tatrut\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\tatrutadmin\\.nuget\\packages\\",
       "outputPath": "C:\\Training\\Bookish\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tatrut\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\tatrutadmin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

@@ -8,7 +8,7 @@ namespace Bookish.Data {
    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=localhost;Database=BookDB;user=ZOO/tatrutadmin;password=&inger_sn4p4263");
+        optionsBuilder.UseSqlServer(@"Server=localhost;Database=BookDB;Trusted_Connection=True");
     }
 
     
