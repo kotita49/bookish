@@ -22,11 +22,7 @@ namespace Bookish.Controllers
         {
             return View();
         }
-        public IActionResult Book()
-        {
-            return View();
-        }
-
+        
         public IActionResult Privacy()
         {
             return View();

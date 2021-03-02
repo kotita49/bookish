@@ -15633,13 +15633,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Training\\Bookish\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Training\\Bookish\\Views\\Book\\Book.cshtml",
+      "TargetPath": "Views\\Book\\Book.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Training\\Bookish\\Views\\Shared\\Book.cshtml",
-      "TargetPath": "Views\\Shared\\Book.cshtml",
+      "FilePath": "c:\\Training\\Bookish\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],

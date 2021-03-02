@@ -1,0 +1,15 @@
+@model Bookish.Models.Book
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Display a Book</h1>
+    <h3>Title: @Model.Title</h3>
+    <h3>Book ID: @Model.BookId</h3>
+    <h3>Author: @Model.BookAuthor</h3>
+    <h3>Published on: @Model.Year</h3>
+
+
+</div>
