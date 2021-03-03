@@ -1,0 +1,27 @@
+@model Bookish.Models.Book;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Add a Book!</h1>
+    <br>
+    <div>
+        <form asp-area="" asp-controller="Book" asp-action="AddBookForm" method="post">
+            Title: <input type="text" id="Title" name="Title">
+            <br/>
+            Author: <input asp-for="BookAuthor"/>
+            <br/>
+            Year Published: <input asp-for="Year"/>
+            <br/>
+            Available Copies: <input asp-for="AvailableCopies"/>
+            <br/>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+

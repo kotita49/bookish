@@ -1,0 +1,17 @@
+@model Bookish.Models.ListOfBooks;
+@{
+    ViewData["Title"] = "Home Page";
+}
+    <h1 class="display-4">Search Form</h1>
+
+    <div>
+        <form asp-area="" asp-controller="Book" asp-action="SearchResult" method="get">
+            <div class="form-group">
+                <label for="SearchYear"></label>
+           <input name="SearchYear"/>
+            <br/>
+            <input type="submit" value="search"></button>
+            </div>
+        </form>
+        
+    </div>
