@@ -14,6 +14,12 @@ namespace Bookish.Data {
     
     //entities
     public DbSet<Book> Books { get; set; }
+    public DbSet<Member> Members { get; set; }
+    public DbSet<Copy> Copy {get; set; }
+    
+    
+    
+    
     
 } 
 

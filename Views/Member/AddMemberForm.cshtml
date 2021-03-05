@@ -1,0 +1,23 @@
+@model Bookish.Models.Member;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Add a Member!</h1>
+    <br>
+    <div>
+        <form asp-area="" asp-controller="Member" asp-action="AddMemberForm" method="post">
+            Name: <input type="text" id="Name" name="Name">
+            <br/>
+            Address: <input asp-for="Address"/>
+            <br/>
+           
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+

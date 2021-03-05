@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace Bookish.Models
 {
-    public class ListOfBooks    {
+    public class ListOfMembers    {
 
     
-        public  List<Book> BookList { get ; set ; }
+        public  List<Member> MemberList { get ; set ; }
        
 
            }

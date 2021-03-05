@@ -1,0 +1,28 @@
+@model Bookish.Models.Copy;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Add a Book!</h1>
+    <br>
+    <div>
+        <form asp-area="" asp-controller="Book" asp-action="AddBookCopy" method="post">
+       
+            Book ID: <input asp-for="BookId"/>
+           
+            <br/>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+           
+
+
+

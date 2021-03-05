@@ -14,7 +14,6 @@ namespace Bookish.Models
 
         public int Year {get; set;}
 
-        public int AvailableCopies {get; set;}
     }
   
 }

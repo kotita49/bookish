@@ -14,12 +14,42 @@ namespace Bookish.Controllers
     {
         public IActionResult Index()
         {
-            var context = new BookContext();
-
-            var top5books = context.Books.Take(5).ToList(); //this is a List of books
-            var displayedBooks = new ListOfBooks { BookList = top5books };
+                var context = new BookContext();
+                var allBooks = context.Books.OrderBy(o => o.BookAuthor).ToList(); //this is a List of books
+                var displayedBooks = new ListOfBooks { BookList = allBooks };
+                
+                
+                // var bookToDelete =
+                //     context.Books.Where(b => b.BookId==10)
+                //         .SingleOrDefault();
+           
+                // context.Books.Remove (bookToDelete);
+                // context.SaveChanges()
+                
             return View(displayedBooks);
         }
+
+        
+        // public IActionResult AddBookCopy()
+        // {
+        //     return View();
+        // }
+        
+        [HttpPost]
+        public IActionResult AddBookCopy(int id)
+        {
+            using (var context = new BookContext())
+            {
+                var newCopy = new Copy()
+                    {
+                      BookId = id,
+                
+                    };
+                context.Copy.Add(newCopy);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        } 
 
         public IActionResult AddBookForm()
         {
@@ -37,13 +67,13 @@ namespace Bookish.Controllers
                         Title = book.Title,
                         BookAuthor = book.BookAuthor,
                         Year = book.Year,
-                        AvailableCopies = book.AvailableCopies
                     };
                 context.Books.Add (newBook);
                 context.SaveChanges();
             }
             return RedirectToAction("Index");
         }
+
 
         public IActionResult Search()
         {

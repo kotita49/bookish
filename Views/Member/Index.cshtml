@@ -1,0 +1,18 @@
+@model Bookish.Models.ListOfMembers;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">List of Members</h1>
+
+    @foreach (var m in Model.MemberList){
+    <h3>Name: @m.Name</h3>
+    <h3>Address: @m.Address</h3>
+    <br>
+    }
+
+
+</div>
+   
+    
