@@ -15,6 +15,8 @@ namespace Bookish.Models
         public string Address {get; set;}
 
         public ICollection<Copy> Copies {get; set;}
+
+        public int? CopyId {get; set; }
     
     }
   

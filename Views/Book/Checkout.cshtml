@@ -1,0 +1,20 @@
+@model Bookish.Models.CheckoutForm;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Checkout a book!</h1>
+    <br>
+    <div>
+        <form asp-area="" asp-controller="Book" asp-action="Checkout" method="post">
+            Copy Id of the book: <input asp-for="CopyId">
+            <br/>
+            ID of Member who is checking out: <input asp-for="MemberId"/>
+            <br/>
+           
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

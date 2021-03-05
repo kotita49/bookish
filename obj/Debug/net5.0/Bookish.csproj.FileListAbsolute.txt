@@ -173,3 +173,4 @@ C:\Training\Bookish\obj\Debug\net5.0\Razor\Views\Book\SearchResult.cshtml.g.cs
 C:\Training\Bookish\obj\Debug\net5.0\Razor\Views\Member\Index.cshtml.g.cs
 C:\Training\Bookish\obj\Debug\net5.0\Razor\Views\Member\AddMemberForm.cshtml.g.cs
 C:\Training\Bookish\obj\Debug\net5.0\Razor\Views\Book\AddBookCopy.cshtml.g.cs
+C:\Training\Bookish\obj\Debug\net5.0\Razor\Views\Book\Checkout.cshtml.g.cs

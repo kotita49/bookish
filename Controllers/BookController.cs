@@ -18,23 +18,40 @@ namespace Bookish.Controllers
                 var allBooks = context.Books.OrderBy(o => o.BookAuthor).ToList(); //this is a List of books
                 var displayedBooks = new ListOfBooks { BookList = allBooks };
                 
-                
-                // var bookToDelete =
-                //     context.Books.Where(b => b.BookId==10)
-                //         .SingleOrDefault();
-           
-                // context.Books.Remove (bookToDelete);
-                // context.SaveChanges()
-                
+               
             return View(displayedBooks);
         }
+         public IActionResult Checkout()
+         {
+                              
+            return View(); 
+         }
+         
+         [HttpPost]
+          public IActionResult Checkout(CheckoutForm checkoutForm)
+         {
+             using (var context = new BookContext())
+            {
+               var copy = context.Copy.Single(s=>s.CopyId == checkoutForm.CopyId);
+               copy.MemberId = checkoutForm.MemberId;
+               copy.IssueDate = DateTime.Now;
+               copy.DueDate = DateTime.Now.AddDays(7);
+               context.SaveChanges();
+               
+               var member = context.Members.Single(s=>s.MemberId == checkoutForm.MemberId);
+                var displayCopies = new ListOfCopies { CopyList = member.Copies.ToList() };
+               displayCopies.ToList().Add(copy);
+               member.CopyId = checkoutForm.CopyId;
+                     
+                
+               context.SaveChanges();
 
-        
-        // public IActionResult AddBookCopy()
-        // {
-        //     return View();
-        // }
-        
+            }
+ 
+            return RedirectToAction("CheckedOutBooks");
+        } 
+       
+              
         [HttpPost]
         public IActionResult AddBookCopy(int id)
         {
@@ -103,4 +120,5 @@ namespace Bookish.Controllers
         //     return 1936;
         //        }
     }
+
 }

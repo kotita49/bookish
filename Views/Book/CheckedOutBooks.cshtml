@@ -1,0 +1,23 @@
+@model Bookish.Models.ListOfCopies;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Display Checked Out Book</h1>
+
+    @foreach (var c in Model.CopyList){
+    <h3>Member Id: @m.MemberId</h3>
+    <h3>Copy ID: @m.CopyId</h3>
+    <h3>Book ID: @m.BookId</h3>
+    <h3>Issue Date: @m.IssueDate</h3>
+    <h3>Return Date: @m.DueDate</h3>
+
+    }
+   
+    
+
+
+</div>
+   
+    
